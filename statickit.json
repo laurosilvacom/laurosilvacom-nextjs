@@ -1,0 +1,15 @@
+{
+  "forms": {
+    "optInForm": {
+      "name": "Opt-In Form",
+      "actions": [
+        {
+          "app": "convertkit",
+          "type": "applyTags",
+          "tags": ["Newsletter"],
+          "apiKey": "@convertkit-api-key"
+        }
+      ]
+    }
+  }
+}

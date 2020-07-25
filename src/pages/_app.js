@@ -2,6 +2,7 @@ import '@/css/tailwind.css'
 import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import {StaticKitProvider} from '@statickit/react'
 
 export default function App({Component, pageProps}) {
   return (
@@ -35,7 +36,9 @@ export default function App({Component, pageProps}) {
 
       <div className="relative max-w-screen-xl mx-auto  px-4 sm:px-6 lg:px-8">
         <main>
-          <Component {...pageProps} />
+          <StaticKitProvider site="f01a1be3bfc2">
+            <Component {...pageProps} />
+          </StaticKitProvider>
         </main>
       </div>
       <Footer />
