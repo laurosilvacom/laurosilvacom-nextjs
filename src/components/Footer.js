@@ -44,7 +44,7 @@ export default function Footer() {
             <div className="mt-8 flex">
               <a href="https://icons8.com/"></a>
               <a
-                href="https://twitter.com/gorails"
+                href="https://twitter.com/laurosilvacom"
                 target="_blank"
                 className="text-gray-400 hover:text-gray-500"
               >
@@ -58,7 +58,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://github.com/gorails-screencasts"
+                href="https://github.com/laurosilvacom"
                 target="_blank"
                 className="ml-6 text-gray-400 hover:text-gray-500"
               >
