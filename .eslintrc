@@ -1,0 +1,31 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "react/prop-types": 0,
+    "import/no-unresolved": 0,
+    "react/jsx-props-no-spreading": 0,
+    "no-shadow": [0, { "hoist": "functions" }],
+    "react/destructuring-assignment": 0,
+    "no-console": 2,
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "bracketSpacing": false,
+        "endOfLine": "lf",
+        "insertPragma": false,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": false,
+        "printWidth": 80,
+        "proseWrap": "always",
+        "quoteProps": "as-needed",
+        "requirePragma": false,
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "all",
+        "useTabs": false
+      }
+    ]
+  }
+}
