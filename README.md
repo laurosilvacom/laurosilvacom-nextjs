@@ -1,1 +1,1 @@
-# Lauro Silva personal website
+# Lauro's digital garden 🌱
