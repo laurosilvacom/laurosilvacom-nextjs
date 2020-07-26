@@ -53,7 +53,7 @@ export default function Post({meta, children, posts}) {
           content={`https://laurosilva.com${meta.image}`}
         />
       </Head>
-      <header className="pt-6 xl:pb-10">
+      <header className="pt-6 xl:pb-20">
         <div className="space-y-1 text-center">
           <dl className="space-y-10">
             <div>
@@ -107,7 +107,7 @@ export default function Post({meta, children, posts}) {
           </dd>
         </dl>
         <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2 bg-white shadow p-6 sm:rounded-lg">
-          <div className="prose max-w-none pt-10 pb-8">
+          <div className="prose mx-auto pt-10 pb-8">
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
           </div>
           {meta.discussion && (
