@@ -21,7 +21,7 @@ React Suspense is a primitive built-into React that drastically simplifies async
 - **Here's the basic idea of React Suspense**:
 - A `<Suspense>` component that lets you “wait” for some code to load and declaratively specify a loading state (like a spinner) while we’re waiting. **Example:**
 
-```js
+```jsx
 function Component() {
   if (data) {
     return <div>{data.message}</div>
@@ -47,7 +47,7 @@ ReactDOM.createRoot(rootEl).render(
   useful. Typically we want to put the data loading requirements right in the
   component that requires the data, via something like this:
 
-```js
+```jsx
 React.useEffect(() => {
   let current = true
   setState({ status: 'pending' })
@@ -71,7 +71,7 @@ React.useEffect(() => {
 
 - **Final code of lesson 1.** This handles error handler.
 
-```js
+```jsx
 let pokemon
 let pokemonPromise = fetchPokemon('pikachu').then((p) => (pokemon = p))
 
@@ -122,7 +122,7 @@ export default App
 
 - Final code should look something like this:
 
-```js
+```jsx
 function App() {
   const [pokemonName, setPokemonName] = React.useState(null)
   const [pokemonResource, setPokemonResource] = React.useState(null)
@@ -161,7 +161,7 @@ export default App
 
 - And here's how it looks like:
 
-```js
+```jsx
 const SUSPENSE_CONFIG = { timeoutMs: 4000 }
 
 function Component() {
@@ -191,7 +191,7 @@ function Component() {
 
 - similar for this exercise:
 
-```js
+```jsx
 const promiseCache = {}
 function MySuspendingComponent({ value }) {
   let resource = promiseCache[value]
@@ -205,7 +205,7 @@ function MySuspendingComponent({ value }) {
 
 - Final solution:
 
-```js
+```jsx
 function App() {
   const [pokemonName, setPokemonName] = React.useState('')
   const [startTransition, isPending] = React.useTransition(SUSPENSE_CONFIG)
@@ -245,7 +245,7 @@ function App() {
 
 - Suspense can help us with this too! Luckily for us, we can pre-load images into the browser's cache using the following code:
 
-```js
+```jsx
 function preloadImage(src) {
   return new Promise((resolve) => {
     const img = document.createElement('img')
@@ -257,7 +257,7 @@ function preloadImage(src) {
 
 - Final code:
 
-```js
+```jsx
 function getPokemonResource(name) {
   const lowerName = name.toLowerCase()
   let resource = pokemonResourceCache[lowerName]
@@ -309,7 +309,7 @@ function App() {
 - React Hooks are amazing. Combine them with React Suspense, and you get some
   really awesome APIs.
 
-```js
+```jsx
 function usePokemonResource(pokemonName) {
   const [pokemonResource, setPokemonResource] = React.useState(null)
   const [startTransition, isPending] = React.useTransition(SUSPENSE_CONFIG)
@@ -370,7 +370,7 @@ export default App
     collapsed shows only the next fallback in the list.
     hidden doesn’t show any unloaded items.
 
-```js
+```jsx
 function App() {
   const [startTransition] = React.useTransition(SUSPENSE_CONFIG)
   const [pokemonResource, setPokemonResource] = React.useState(null)

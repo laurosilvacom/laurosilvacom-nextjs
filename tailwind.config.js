@@ -5,7 +5,6 @@ const mdx = require('@mdx-js/mdx')
 
 module.exports = {
   purge: {
-    mode: 'all',
     content: ['./src/**/*.{js,mdx}', './next.config.js'],
     options: {
       extractors: [
