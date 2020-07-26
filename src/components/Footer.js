@@ -36,9 +36,6 @@ export default function Footer() {
               I’m a software engineer, and instructor. I learn and teach
               JavaScript, React and web development. I’m also a full-time
               collaborator at egghead.io, a community of badass web developers
-              <span className="text-xs">
-                Icons by <a href="https://icons8.com/">Icons8</a>
-              </span>
             </p>
             <a href="https://icons8.com/"></a>
             <div className="mt-8 flex">
@@ -130,8 +127,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-base leading-6 text-gray-400 xl:text-center">
+        <div className="mt-12 border-t border-gray-800 pt-8">
+          <p className="leading-6 text-gray-500 xl:text-center text-sm">
             © 2020 Lauro Silva, LLC. All rights reserved.
           </p>
         </div>

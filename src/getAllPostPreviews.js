@@ -13,6 +13,6 @@ function dateSortDesc(a, b) {
 
 export default function getAllPostPreviews() {
   return importAll(
-    require.context('./pages/?preview', true, /\.mdx$/),
+    require.context('./pages/blog?preview', true, /\.mdx$/),
   ).sort((a, b) => dateSortDesc(a.module.meta.date, b.module.meta.date))
 }
