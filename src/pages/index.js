@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import getAllPostPreviews from '@/getAllPostPreviews'
 import twitterCard from '@/img/twitter-card.jpg'
-import Form from '@/components/Form'
 
 const posts = getAllPostPreviews()
 
@@ -80,7 +79,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-      <Form></Form>
       <div className="max-w-screen-xl mx-auto lg:py-16 m-10">
         <div className="px-6 py-6 bg-indigo-700 rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
           <div className="xl:w-0 xl:flex-1">
