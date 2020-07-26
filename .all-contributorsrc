@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "laurosilvacom",
+      "name": "Lauro Silva",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/57044804?v=4",
+      "profile": "https://laurosilva.com",
+      "contributions": [
+        "code",
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "laurosilvacom-nextjs",
+  "projectOwner": "laurosilvacom",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
