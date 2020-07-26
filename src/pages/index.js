@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/button-has-type */
 /* eslint-disable import/no-unresolved */
-import tinytime from 'tinytime'
 import Link from 'next/link'
 import Head from 'next/head'
 import getAllPostPreviews from '@/getAllPostPreviews'
@@ -9,8 +8,6 @@ import twitterCard from '@/img/twitter-card.jpg'
 import Form from '@/components/Form'
 
 const posts = getAllPostPreviews()
-
-const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 
 export default function Home() {
   return (

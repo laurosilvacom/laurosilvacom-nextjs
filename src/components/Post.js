@@ -27,6 +27,7 @@ export default function Post({meta, children, posts}) {
   const postIndex = posts.findIndex(post => post.link === router.pathname)
   const previous = posts[postIndex + 1]
   const next = posts[postIndex - 1]
+  const twitterShare = `https://twitter.com/intent/tweet?url=${`https://laurosilva.com${router.pathname}&text=${meta.discussion}`}`
 
   return (
     <article>
@@ -109,20 +110,21 @@ export default function Post({meta, children, posts}) {
         <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2 bg-white shadow p-6 sm:rounded-lg">
           <div className="prose mx-auto pt-10 pb-8">
             <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+            <hr></hr>
+            {meta.discussion && (
+              <div>
+                <p>
+                  Want to talk about this post?{' '}
+                  <a
+                    href={twitterShare}
+                    className="font-medium text-indigo-500 hover:text-indigo-600"
+                  >
+                    Discuss this on Twitter &rarr;
+                  </a>
+                </p>
+              </div>
+            )}
           </div>
-          {meta.discussion && (
-            <div className="pt-6 pb-16">
-              <p>
-                Want to talk about this post?{' '}
-                <a
-                  href={meta.discussion}
-                  className="font-medium text-indigo-500 hover:text-indigo-600"
-                >
-                  Discuss this on GitHub &rarr;
-                </a>
-              </p>
-            </div>
-          )}
         </div>
         <footer className="text-sm font-medium leading-5 divide-y divide-gray-200 xl:col-start-1 xl:row-start-2">
           {(next || previous) && (
