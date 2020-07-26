@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const mdx = require('@mdx-js/mdx')
 
 module.exports = {
-  purge: ['./src/**/*.html', './src/**/*.js', './src/**/*.jsx'],
+  purge: ['./src/**/*.{js,mdx}', './next.config.js'],
   theme: {
     extend: {
       spacing: {
