@@ -28,7 +28,7 @@ class Signup extends React.Component {
     return (
       <div className="max-w-screen-xl mx-auto lg:py-16 m-10">
         <div className="px-6 py-6 bg-indigo-700 rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
-          <div className="xl:w-0 xl:flex-1 max-w-lg">
+          <div className="max-w-md">
             <h2 className="text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl sm:leading-9">
               {form.title}
             </h2>
@@ -37,7 +37,7 @@ class Signup extends React.Component {
             </p>
           </div>
 
-          <div className="mt-8  xl:mt-0 xl:ml-8 text-white">
+          <div className="mt-8 xl:mt-0 xl:ml-8 text-white">
             <div data-element="fields">
               <ul
                 className="text-red-500"
@@ -52,7 +52,7 @@ class Signup extends React.Component {
                   <input
                     aria-label="Your first name"
                     name="fields[first_name]"
-                    placeholder="Your first name"
+                    placeholder="First name"
                     type="text"
                     required
                     className="appearance-none w-full px-5 py-3 mt-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out mr-4"
@@ -60,7 +60,7 @@ class Signup extends React.Component {
                   <input
                     name="email_address"
                     aria-label="Your email address"
-                    placeholder="Your email address"
+                    placeholder="Email address"
                     required
                     type="email"
                     className="appearance-none w-full px-5 py-3 mt-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out"
