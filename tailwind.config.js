@@ -6,6 +6,9 @@ module.exports = {
   purge: {
     mode: 'all',
     content: ['./src/**/*.{js,mdx}', './next.config.js'],
+    options: {
+      whitelist: [{extensions: ['mdx']}],
+    },
   },
   theme: {
     extend: {
