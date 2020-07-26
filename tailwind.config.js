@@ -1,9 +1,12 @@
+/* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
 const defaultTheme = require('tailwindcss/defaultTheme')
 const mdx = require('@mdx-js/mdx')
 
 module.exports = {
-  purge: ['./src/**/*.{js,mdx}', './next.config.js'],
+  purge: {
+    purge: ['./src/**/*.{js,mdx}', './next.config.js'],
+  },
   theme: {
     extend: {
       spacing: {
