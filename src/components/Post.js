@@ -22,11 +22,8 @@ const mdxComponents = {
 
 const postDateTemplate = tinytime('{dddd}, {MMMM} {DD}, {YYYY}')
 
-export default function Post({meta, children, posts}) {
+export default function Post({meta, children}) {
   const router = useRouter()
-  const postIndex = posts.findIndex(post => post.link === router.pathname)
-  const previous = posts[postIndex + 1]
-  const next = posts[postIndex - 1]
   const twitterShare = `https://twitter.com/intent/tweet?url=${`https://laurosilva.com${router.pathname}&text=${meta.discussion}`}`
 
   return (
@@ -127,34 +124,6 @@ export default function Post({meta, children, posts}) {
           </div>
         </div>
         <footer className="text-sm font-medium leading-5 divide-y divide-gray-200 xl:col-start-1 xl:row-start-2">
-          {(next || previous) && (
-            <div className="space-y-8 py-8">
-              {next && (
-                <div>
-                  <h2 className="text-xs tracking-wide uppercase text-gray-500">
-                    Next Article
-                  </h2>
-                  <div className="text-indigo-500 hover:text-indigo-600">
-                    <Link href={next.link}>
-                      <a>{next.title}</a>
-                    </Link>
-                  </div>
-                </div>
-              )}
-              {previous && (
-                <div>
-                  <h2 className="text-xs tracking-wide uppercase text-gray-500">
-                    Previous Article
-                  </h2>
-                  <div className="text-indigo-500 hover:text-indigo-600">
-                    <Link href={previous.link}>
-                      <a>{previous.title}</a>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
           <div className="pt-8">
             <Link href="/">
               <a className="text-indigo-500 hover:text-indigo-600">

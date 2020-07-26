@@ -40,17 +40,16 @@ export default function Home() {
       </Head>
       <ul className="divide-y divide-gray-100 bg-white shadow p-4 rounded-lg">
         {posts.map(({link, module: {default: Component, meta}}) => (
-          <li key={`blog${link}`} className="py-12">
+          <div key={`blog${link}`} className="py-12">
             <article className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
               <div className="mb-2 md:mb-0  md:w-4/5">
-                <Link
-                  className="episode-thumbnail flex justify-center items-center"
-                  href={`blog${link}`}
-                >
-                  <img
-                    className="rounded-md img-responsive cursor-pointer"
-                    src={meta.image}
-                  ></img>
+                <Link href={`blog${link}`}>
+                  <a className="episode-thumbnail flex justify-center items-center">
+                    <img
+                      className="rounded-md img-responsive cursor-pointer"
+                      src={meta.image}
+                    ></img>
+                  </a>
                 </Link>
               </div>
 
@@ -77,7 +76,7 @@ export default function Home() {
                 </div>
               </div>
             </article>
-          </li>
+          </div>
         ))}
       </ul>
       <Signup />

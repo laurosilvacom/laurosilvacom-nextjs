@@ -4,3 +4,9 @@
 
 @tailwind components;
 @tailwind utilities;
+
+.prose code {
+  background: #e9e9ea;
+  padding: 2px 2px;
+  border-radius: 3px;
+}
